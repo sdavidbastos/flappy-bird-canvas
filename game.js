@@ -17,9 +17,8 @@ const planoDeFundo = {
   x: 0,
   y: canvas.height - 276,
   desenha() {
-
-    contexto.fillStyle = "#70c5ce"
-    contexto.fillRect(0, 0, canvas.width, canvas.height)
+    contexto.fillStyle = "#70c5ce";
+    contexto.fillRect(0, 0, canvas.width, canvas.height);
 
     contexto.drawImage(
       sprites,
@@ -38,7 +37,7 @@ const planoDeFundo = {
       planoDeFundo.spriteY,
       planoDeFundo.largura,
       planoDeFundo.altura,
-      (planoDeFundo.x + planoDeFundo.largura),
+      planoDeFundo.x + planoDeFundo.largura,
       planoDeFundo.y,
       planoDeFundo.largura,
       planoDeFundo.altura
@@ -87,6 +86,12 @@ const flappyBird = {
   altura: 24,
   x: 10,
   y: 50,
+  gravidade: 0.25,
+  velocidade:0,
+  atualiza() {
+    flappyBird.velocidade = flappyBird.velocidade + flappyBird.gravidade
+    flappyBird.y = flappyBird.y + flappyBird.velocidade;
+  },
   desenha() {
     contexto.drawImage(
       sprites,
@@ -106,7 +111,7 @@ function loop() {
   planoDeFundo.desenha();
   chao.desenha();
   flappyBird.desenha();
-  flappyBird.y = flappyBird.y +1
+  flappyBird.atualiza();
   requestAnimationFrame(loop);
 }
 
