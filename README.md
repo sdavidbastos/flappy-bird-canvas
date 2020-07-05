@@ -4,5 +4,5 @@
 
 # Tecnologias
 
--HTML, CSS e JavaScript.
--Foco na manipulação do canvas.
+- HTML, CSS e JavaScript
+- Foco na manipulação do canvas
