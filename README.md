@@ -1,6 +1,6 @@
 # Flappy Bird
 
-- Projeto direcionado para eu aprimoramente no front-end
+- Projeto direcionado para meu aprimoramente no front-end
 
 # Tecnologias
 
